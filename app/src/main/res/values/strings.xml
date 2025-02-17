@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ComposeBusinessCard</string>
+    <string name="full_name_text">Don Michael Magoshe</string>
+    <string name="android_developer_text">Android Developer</string>
+    <string name="phone_number_text">+263 781 196 652</string>
+    <string name="social_media_text">\@donmykl</string>
+    <string name="email_text">donmichael21@gmail.com</string>
+</resources>
