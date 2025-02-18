@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
@@ -47,8 +48,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ContactName(modifier: Modifier = Modifier) {
-    Column(modifier = Modifier
+fun ContactName() {
+    Column(
+        modifier = Modifier
         .fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
@@ -72,43 +74,57 @@ fun ContactName(modifier: Modifier = Modifier) {
 
     }
     Column (modifier = Modifier
-        .fillMaxWidth(),
+        .fillMaxWidth()
+        .padding(bottom = 100.dp)
+        .padding(top = 100.dp),
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-        Row (modifier = Modifier,
-            horizontalArrangement = Arrangement.Center,
+        Row (modifier = Modifier
+            .padding(bottom = 10.dp)
+            .padding(top = 10.dp)
+            .padding(start = 50.dp)
+            .padding(end = 50.dp),
         ){
             Icon(Icons.Filled.Call,
                 contentDescription = null,
                 modifier = Modifier
                     .weight(1f))
             Text(text = stringResource(R.string.phone_number_text,),
-                modifier = Modifier,
-                textAlign = TextAlign.Center,
-                fontSize = 20.sp,
+                modifier = Modifier
+                    .weight(2f),
+
             )
         }
-        Row (modifier = Modifier,
+        Row (modifier = Modifier
+            .padding(bottom = 10.dp)
+            .padding(top = 10.dp)
+            .padding(start = 50.dp)
+            .padding(end = 50.dp),
             horizontalArrangement = Arrangement.Center){
             Icon(Icons.Filled.Share,
                 contentDescription = null,
                 modifier = Modifier
                     .weight(1f))
 
-            Text(modifier = Modifier,
+            Text(modifier = Modifier
+                .weight(2f),
                 text = stringResource(R.string.social_media_text),
-                textAlign = TextAlign.Center,
-                fontSize = 20.sp)
+                )
         }
-        Row(modifier = Modifier,
+        Row(modifier = Modifier
+            .padding(bottom = 10.dp)
+            .padding(top = 10.dp)
+            .padding(start = 50.dp)
+            .padding(end = 50.dp),
             horizontalArrangement = Arrangement.Center) {
             Icon(Icons.Filled.Email, contentDescription = null,
                 modifier = Modifier
                     .weight(1f))
             Text(text = stringResource(R.string.email_text),
-                modifier = Modifier,
-                fontSize = 20.sp)
+                modifier = Modifier
+                    .weight(2f),
+                )
         }
     }
 
