@@ -9,6 +9,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -68,14 +69,18 @@ fun ContactName() {
         Text(text = stringResource(R.string.full_name_text),
             modifier = Modifier,
             fontSize = 35.sp,
+            color = Color.White,
             fontWeight = FontWeight.Bold
         )
 
         Text(text = stringResource(R.string.android_developer_text),
             modifier = Modifier,
             textAlign = TextAlign.Justify,
+            color = Color(0xFF073042),
             fontSize = 20.sp,
         )
+        Spacer(modifier = Modifier
+            .padding(bottom = 300.dp))
 
     }
     Column (modifier = Modifier
@@ -100,6 +105,7 @@ fun ContactName() {
             Text(text = stringResource(R.string.phone_number_text,),
                 modifier = Modifier
                     .weight(3f),
+                color = Color.White
 
             )
         }
@@ -116,10 +122,10 @@ fun ContactName() {
                     .weight(1f),
                 Color(0xFF3ddc84))
 
-            Text(modifier = Modifier
+            Text(text = stringResource(R.string.social_media_text),
+                modifier = Modifier
                 .weight(3f),
-                text = stringResource(R.string.social_media_text),
-                )
+                color = Color.White)
         }
         Row(modifier = Modifier
             .padding(bottom = 10.dp)
@@ -136,6 +142,7 @@ fun ContactName() {
             Text(text = stringResource(R.string.email_text),
                 modifier = Modifier
                     .weight(3f),
+                color = Color.White
                 )
         }
     }
