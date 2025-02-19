@@ -5,7 +5,7 @@ I made this simple business card as part of my Jetpack Compose journey.
 ## Features
 
 - [x] A simple but clean business card with your name and title
-- [x] Android mascot which can be switched with your own image
+- [x] Android mascot which can be switched with your image
 - [x] Personal details like phone number, social media and email address
 
 ## Screenshot
@@ -15,8 +15,8 @@ I made this simple business card as part of my Jetpack Compose journey.
 ## Getting Started
 
 1. Clone the repository ```sh git clone https://github.com/DonMykl/ComposeBusinessCard.git```
-2. Open the project in Android Studio targetSdk = 35, minSdk = 24
-3. Build and run the app on the androiod emulator or physical device
+2. Open the project in Android Studio (targetSdk = 35, minSdk = 24)
+3. Build and run the app on the Android emulator or physical device
 
 ## Built With
 
