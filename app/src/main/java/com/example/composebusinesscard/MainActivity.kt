@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -23,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -51,18 +53,21 @@ class MainActivity : ComponentActivity() {
 fun ContactName() {
     Column(
         modifier = Modifier
-        .fillMaxWidth(),
+        .fillMaxWidth()
+            .background(color = Color(0xFF073042)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
         val image: Painter = painterResource(R.drawable.android_logo)
+
         Image(painter = image,
             contentDescription = null,
             modifier = Modifier
                 .width(200.dp)
                 .height(200.dp))
+
         Text(text = stringResource(R.string.full_name_text),
             modifier = Modifier,
-            fontSize = 30.sp,
+            fontSize = 35.sp,
             fontWeight = FontWeight.Bold
         )
 
@@ -89,10 +94,12 @@ fun ContactName() {
             Icon(Icons.Filled.Call,
                 contentDescription = null,
                 modifier = Modifier
-                    .weight(1f))
+                    .weight(1f),
+                Color(0xFF3ddc84))
+
             Text(text = stringResource(R.string.phone_number_text,),
                 modifier = Modifier
-                    .weight(2f),
+                    .weight(3f),
 
             )
         }
@@ -102,13 +109,15 @@ fun ContactName() {
             .padding(start = 50.dp)
             .padding(end = 50.dp),
             horizontalArrangement = Arrangement.Center){
+
             Icon(Icons.Filled.Share,
                 contentDescription = null,
                 modifier = Modifier
-                    .weight(1f))
+                    .weight(1f),
+                Color(0xFF3ddc84))
 
             Text(modifier = Modifier
-                .weight(2f),
+                .weight(3f),
                 text = stringResource(R.string.social_media_text),
                 )
         }
@@ -118,12 +127,15 @@ fun ContactName() {
             .padding(start = 50.dp)
             .padding(end = 50.dp),
             horizontalArrangement = Arrangement.Center) {
+
             Icon(Icons.Filled.Email, contentDescription = null,
                 modifier = Modifier
-                    .weight(1f))
+                    .weight(1f),
+                Color(0xFF3ddc84))
+
             Text(text = stringResource(R.string.email_text),
                 modifier = Modifier
-                    .weight(2f),
+                    .weight(3f),
                 )
         }
     }
