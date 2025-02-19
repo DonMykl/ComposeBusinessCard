@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeBusinessCardTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    ContactName()
+                    BusinessCard()
                 }
             }
         }
@@ -51,99 +51,124 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ContactName() {
+fun BusinessCard() {
     Column(
         modifier = Modifier
-        .fillMaxWidth()
+            .fillMaxWidth()
             .background(color = Color(0xFF073042)),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally) {
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
         val image: Painter = painterResource(R.drawable.android_logo)
 
-        Image(painter = image,
+        Image(
+            painter = image,
             contentDescription = null,
             modifier = Modifier
                 .width(200.dp)
-                .height(200.dp))
+                .height(200.dp)
+        )
 
-        Text(text = stringResource(R.string.full_name_text),
+        Text(
+            text = stringResource(R.string.full_name_text),
             modifier = Modifier,
             fontSize = 35.sp,
             color = Color.White,
             fontWeight = FontWeight.Bold
         )
 
-        Text(text = stringResource(R.string.android_developer_text),
+        Text(
+            text = stringResource(R.string.android_developer_text),
             modifier = Modifier,
             textAlign = TextAlign.Justify,
-            color = Color(0xFF073042),
-            fontSize = 20.sp,
+            color = Color(0xFF3ddc84),
+            fontSize = 25.sp,
         )
-        Spacer(modifier = Modifier
-            .padding(bottom = 300.dp))
+        Spacer(
+            modifier = Modifier
+                .padding(bottom = 300.dp)
+        )
 
     }
-    Column (modifier = Modifier
-        .fillMaxWidth()
-        .padding(bottom = 100.dp)
-        .padding(top = 100.dp),
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 100.dp)
+            .padding(top = 100.dp),
         verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.CenterHorizontally) {
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
 
-        Row (modifier = Modifier
-            .padding(bottom = 10.dp)
-            .padding(top = 10.dp)
-            .padding(start = 50.dp)
-            .padding(end = 50.dp),
-        ){
-            Icon(Icons.Filled.Call,
+        Row(
+            modifier = Modifier
+                .padding(bottom = 10.dp)
+                .padding(top = 10.dp)
+                .padding(start = 50.dp)
+                .padding(end = 50.dp),
+        ) {
+            Icon(
+                Icons.Filled.Call,
                 contentDescription = null,
                 modifier = Modifier
                     .weight(1f),
-                Color(0xFF3ddc84))
+                Color(0xFF3ddc84)
+            )
 
-            Text(text = stringResource(R.string.phone_number_text,),
+            Text(
+                text = stringResource(R.string.phone_number_text),
                 modifier = Modifier
                     .weight(3f),
                 color = Color.White
 
             )
         }
-        Row (modifier = Modifier
-            .padding(bottom = 10.dp)
-            .padding(top = 10.dp)
-            .padding(start = 50.dp)
-            .padding(end = 50.dp),
-            horizontalArrangement = Arrangement.Center){
+        Row(
+            modifier = Modifier
+                .padding(bottom = 10.dp)
+                .padding(top = 10.dp)
+                .padding(start = 50.dp)
+                .padding(end = 50.dp),
+            horizontalArrangement = Arrangement.Center
+        ) {
 
-            Icon(Icons.Filled.Share,
+            Icon(
+                Icons.Filled.Share,
                 contentDescription = null,
                 modifier = Modifier
                     .weight(1f),
-                Color(0xFF3ddc84))
+                Color(0xFF3ddc84)
+            )
 
-            Text(text = stringResource(R.string.social_media_text),
-                modifier = Modifier
-                .weight(3f),
-                color = Color.White)
-        }
-        Row(modifier = Modifier
-            .padding(bottom = 10.dp)
-            .padding(top = 10.dp)
-            .padding(start = 50.dp)
-            .padding(end = 50.dp),
-            horizontalArrangement = Arrangement.Center) {
-
-            Icon(Icons.Filled.Email, contentDescription = null,
-                modifier = Modifier
-                    .weight(1f),
-                Color(0xFF3ddc84))
-
-            Text(text = stringResource(R.string.email_text),
+            Text(
+                text = stringResource(R.string.social_media_text),
                 modifier = Modifier
                     .weight(3f),
                 color = Color.White
-                )
+            )
+        }
+        Row(
+            modifier = Modifier
+                .padding(bottom = 10.dp)
+                .padding(top = 10.dp)
+                .padding(start = 50.dp)
+                .padding(end = 50.dp),
+            horizontalArrangement = Arrangement.Center
+        ) {
+
+            Icon(
+                Icons.Filled.Email, contentDescription = null,
+                modifier = Modifier
+                    .weight(1f),
+                Color(0xFF3ddc84)
+            )
+
+            Text(
+                text = stringResource(R.string.email_text),
+                modifier = Modifier
+                    .weight(3f),
+                color = Color.White
+            )
         }
     }
 
@@ -153,6 +178,6 @@ fun ContactName() {
 @Composable
 fun GreetingPreview() {
     ComposeBusinessCardTheme {
-        ContactName()
+        BusinessCard()
     }
 }
